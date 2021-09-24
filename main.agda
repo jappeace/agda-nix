@@ -1,6 +1,11 @@
 module main where
 
-open import IO
-open import Data.Unit using () renaming (⊤ to Unit)
+open import Agda.Builtin.Bool
 
-main = run (putStrLn "Hello, Lummie!")
+
+data False
+data True
+
+proposition : (trueand` true) ~ true
+proposition = undefined
+
