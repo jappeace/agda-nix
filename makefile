@@ -1,6 +1,6 @@
 default: build
 
 build:
-	agda --compile ./main.agda  --include-path "$(STD_LIB)/src" --guardedness --ignore-interfaces --compile-dir=out
+	agda --compile ./main.agda --library="standard-library-1.7.1"
 check: 
 	agda --include-path "$(STD_LIB)" ./main.agda
