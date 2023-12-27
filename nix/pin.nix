@@ -15,7 +15,7 @@ import pinnedPkgs {
     name = "agda-jappie";
     url = "https://github.com/jappeace/agda.git";
     rev = "38d473b126e4919e143e6c587c219c3c2ba83c2c";
-      } }).withPackages (p: [ p.standard-library ]);
+      }; }).withPackages (p: [ p.standard-library ]);
     };
   };
 
