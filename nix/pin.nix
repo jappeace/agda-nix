@@ -11,7 +11,11 @@ import pinnedPkgs {
   config = {
     # set an agda https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/agda.section.md#agda-agda
     packageOverrides = pkgs: {
-      agsy = pkgs.agda.withPackages (p: [ p.standard-library ]);
+      agsy = (pkgs.agda.override { src = builtins.fetchGit {
+    name = "agda-jappie";
+    url = "https://github.com/jappeace/agda.git";
+    rev = "38d473b126e4919e143e6c587c219c3c2ba83c2c";
+      } }).withPackages (p: [ p.standard-library ]);
     };
   };
 
